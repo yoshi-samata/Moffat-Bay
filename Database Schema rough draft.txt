@@ -1,0 +1,35 @@
+Database Schema
+
+DB name: Moffat Bay
+
+Moffat Bay Tables: Customer Account
+		   Slip Reservation
+		   Slip availability
+
+
+Customer Account Table:
+	* UserId - generated when account is created, unique value
+	* email - Collected from the account creation form. The assignment instructions have us use the email as the username for accounts.
+	* Name- Can we use one field for first and last name?
+	*Boatname- boat name value provided by customer when creating an account
+	* boat length- also provided by customer when creating account
+	* Password- created by customer when creating an account. MUST BE HASHED
+
+Slip Reservation Table:
+	Reservation ID- automatic generated after submitting reservation
+	UserId- From Account information
+	Boatname- pulled from account information
+	Reservation date- data from reservation form
+	Slip Length- auto assigned based on boat length? 
+
+
+Not sure this last table is needed. Any recomondation 
+Slip Availability Table
+	10 ft slip vacancies
+	25 ft slip vacancies
+	50 ft slip vacancies
+
+	
+
+
+
