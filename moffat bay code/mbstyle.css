@@ -3,10 +3,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url("C:/xampp/img/background image");
+}
+p {
+    margin: 1;
+    padding: auto;
+    text-align: center;
+    display: inline-block;
+    margin-left: 15%;
+}
+form {
+    align-items: center;
+}
+button{
+    align-self: center;
 }
 
 /* Header styling */
-h1, h2 {
+h1, h2,h3 {
     text-align: center;
     color: black;
 }
@@ -46,7 +60,7 @@ nav ul li:hover ul {
 nav ul li ul li a {
     padding: 10px 15px;
     display: block;
-    background-color: #dd3333;
+    background-color: #007BFF;
     color: #000;
 }
 
