@@ -1,0 +1,65 @@
+/*Joshua Martin/Puna  /Aaron Camp/*Enter Names here after worked on your part* */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .5),rgba(0,0,0, .5)), url(./images/Background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.logo{
+    width: 120px;
+
+}
+nav ul{
+    display: flex;
+    align-items: center;
+
+}
+
+nav ul li{
+    margin: 0 20px;
+
+}
+nav ul li a{
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+nav ul li a:hover{
+    color: rgb(131, 164, 255);
+    border-bottom: 2px solid rgb(131, 164, 255);
+}
+
+nav button{
+    padding: 12px 35px;
+    background: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+nav button:hover{
+    background: #56606b;
+    scale: .8;
+}
