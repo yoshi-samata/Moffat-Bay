@@ -5,6 +5,8 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    box-sizing: border-box; /* Ensure padding and borders don't affect width */
 }
 
 h1, h2, h3 {
@@ -18,7 +20,7 @@ p {
     text-align: center;
 }
 
-/* Navigation Bar Styling *//* General Navigation Bar Styling */
+/* Navigation Bar Styling */
 nav {
     background-color: #333;
     padding: 5px;
@@ -30,8 +32,8 @@ nav {
 }
 
 nav img.logo {
-    width: 70px; /* Adjust logo size to 30px */
-    height: 70px;
+    width: 80px; /* Adjust logo size to 30px */
+    height: 80px;
     vertical-align: middle;
 }
 
@@ -99,11 +101,10 @@ nav ul.show {
     display: block;
 }
 
-
 /* Hero Section */
 .hero {
-    background: url('images/hero-background.jpg') center/cover no-repeat;
-    height: 350px;
+    background: url('https://images.unsplash.com/photo-1558598992-a77c6d843b4e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    height: 90vh;
     color: white;
     text-align: center;
     display: flex;
