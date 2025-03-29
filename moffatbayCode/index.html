@@ -4,27 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="mbstyle.css">
     <Title>Moffat Bay Marina - Landing Page</Title>
 </head>
 
 <body>
+    <nav>
+        <img src="./images/Logo.png" class="logo" alt="Moffat Bay Logo">
+        <ul id="menu" class="hidden">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    
+    <!-- Hero Section -->
     <div class="hero">
-        <nav>
-            <img src="./images/Logo.png" class="logo">
-            <ul>
-                <li><a href="#"><a href="about.html">About Us</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="contact.html">Contact Us</li>
-            </ul>
-
-            <button>More</button>
-        </nav>
+        <div class="hero-content">
+            <h2>Welcome to Moffat Bay Marina</h2>
+            <p>Your gateway to unforgettable experiences on the water</p>
+            <button class="cta-button"><a href="about.html">Learn More</a></button>
+        </div>
     </div>
 
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <img src="https://plus.unsplash.com/premium_photo-1680194035595-476967e15ee2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lodge Accommodation">
+            <h3>Lodge Accommodation</h3>
+            <p>Relax in our luxurious lodge with amazing views and top-class amenities.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://images.unsplash.com/reserve/NCms4RFRRu5osRmatf5i_blue-haven-marina-turks-and-caicos_jon-phillips-unsplash.jpg?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marina Slips">
+            <h3>Marina Slips</h3>
+            <p>We offer boat slips for both large and small vessels. Convenient and secure.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://plus.unsplash.com/premium_photo-1664635402286-4903aa891a80?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Boat Rentals">
+            <h3>Boat Rentals</h3>
+            <p>Explore the waters with our variety of boat rentals for your next adventure.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"Moffat Bay Marina made our weekend getaway amazing! The lodge was perfect, and the service was beyond expectations. We’ll be back soon!"</p>
+            <p><strong>Sarah Johnson</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"We rented a boat for the day, and it was an incredible experience. Highly recommend Moffat Bay Marina for anyone looking to get out on the water!"</p>
+            <p><strong>John Smith</strong></p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Moffat Bay Marina. All rights reserved.</p>
+        <p>Follow us on: 
+            <a href="https://facebook.com/" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com/" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+        </p>
+    </footer>
 
 </body>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("show");
+    }
+</script>
+
 
 </html>
