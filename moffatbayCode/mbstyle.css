@@ -1,69 +1,621 @@
 /* General page styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("C:/xampp/img/background image");
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    box-sizing: border-box; /* Ensure padding and borders don't affect width */
 }
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
 p {
-    margin: 1;
-    padding: auto;
+    margin: 20px auto;
+    padding: 0 15px;
     text-align: center;
-    display: inline-block;
-    margin-left: 15%;
 }
-form {
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #333;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
     align-items: center;
-}
-button{
-    align-self: center;
+    justify-content: space-between;
 }
 
-/* Header styling */
-h1, h2,h3 {
-    text-align: center;
-    color: black;
+nav img.logo {
+    width: 80px; /* Adjust logo size to 30px */
+    height: 80px;
+    vertical-align: middle;
 }
 
-/* Navigation menu styling */
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: inline-block;
+    margin-left: 20px;
 }
 
 nav ul li {
-    position: relative;
     display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    background-color: #007BFF;
     color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-nav ul li ul {
-    display: block;
-    position: absolute;
-    background-color: #f9f9f9;
-    padding: 10px 0;
-    list-style-type: none;
-    margin: 0;
+nav ul li a:hover {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
 }
 
-nav ul li:hover ul {
+/* Hamburger Icon (Only visible on mobile) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+    }
+
+    nav ul {
+        display: none; /* Hide menu on mobile */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block; /* Stack menu items vertically */
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    nav ul.hidden {
+        display: none; /* Initially hide the menu */
+    }
+}
+
+/* Show the menu when it's active */
+nav ul.show {
     display: block;
 }
 
-nav ul li ul li a {
-    padding: 10px 15px;
-    display: block;
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1558598992-a77c6d843b4e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    height: 90vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .cta-button {
+    padding: 15px 30px;
     background-color: #007BFF;
-    color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-nav ul li ul li a:hover {
-    background-color: #bbb;
+.hero .cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 15px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.service-item {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+    color: #333;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+}
+
+.testimonial strong {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #007BFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.6em;
+    }
+
+    .service-item {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* ==================
+about us pagee
+=================== */
+/* About Us Section */
+.about {
+    padding: 40px 15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin: 10px auto;
+    width: 80%;
+    line-height: 1.5;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 15px;
+    background-color: #f4f4f9;
+}
+
+.mission, .vision {
+    width: 45%;
+    text-align: center;
+}
+
+.mission h3, .vision h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+/* ===============
+register pagee
+=============== */
+
+/* Hero Section for Register Page (Unique Class Name) */
+.register-hero {
+    background: url('https://images.unsplash.com/photo-1436162716854-dcb9157bfac1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.register-hero .hero-content {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+}
+
+.register-hero .hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.register-hero .hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.register-hero .registration-form {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    flex: 1;
+    margin-left: 30px;
+}
+
+.register-hero .registration-form form {
+    display: block;
+    width: 100%;
+}
+
+.register-hero .registration-form form label {
+    font-size: 1.1em;
+    display: block;
+    color: #333;
+}
+
+.register-hero .registration-form form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.register-hero .registration-form form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button Styling */
+.register-hero .registration-form form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-hero .registration-form form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.register-hero .registration-form form input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .register-hero {
+        flex-direction: column; /* Stack text and form vertically */
+        height: auto; /* Adjust height for small screens */
+    }
+
+    .register-hero .hero-content {
+        text-align: center;
+        max-width: 100%; /* Allow the text to occupy full width on small screens */
+        margin-bottom: 20px; /* Add space below the text */
+    }
+
+    .register-hero .registration-form {
+        max-width: 100%; /* Allow form to take up full width */
+        margin-left: 0; /* Remove margin on small screens */
+    }
+}
+
+
+/* ===============
+login page
+=============== */
+/* Hero Section for Login Page (Unique Class Name) */
+.login-hero {
+    background: url('https://images.unsplash.com/photo-1519587334172-b4c56ceb7d67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.login-hero .hero-content {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+}
+
+.login-hero .hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.login-hero .hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.login-hero .login-form {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    flex: 1;
+    margin-left: 30px;
+}
+
+.login-hero .login-form form {
+    display: block;
+    width: 100%;
+}
+
+.login-hero .login-form form label {
+    font-size: 1.1em;
+    margin: 10px 0;
+    display: block;
+    color: #333;
+}
+
+.login-hero .login-form form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.login-hero .login-form form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button Styling */
+.login-hero .login-form form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-hero .login-form form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.login-hero .login-form form input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .login-hero {
+        flex-direction: column; /* Stack text and form vertically */
+        height: auto; /* Adjust height for small screens */
+    }
+
+    .login-hero .hero-content {
+        text-align: center;
+        max-width: 100%; /* Allow the text to occupy full width on small screens */
+        margin-bottom: 20px; /* Add space below the text */
+    }
+
+    .login-hero .login-form {
+        max-width: 100%; /* Allow form to take up full width */
+        margin-left: 0; /* Remove margin on small screens */
+    }
+}
+
+/* ===============
+contact us pagee
+================ */
+/* Contact Us Page Hero Section */
+.contact-hero {
+    background: url('https://images.unsplash.com/photo-1519587334172-b4c56ceb7d67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.contact-hero .hero-content {
+    text-align: center;
+}
+
+.contact-hero .hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-hero .hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Contact Information Section */
+.contact-info {
+    padding: 50px 15px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.contact-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-item {
+    width: 45%;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact-item a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #007BFF;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 80%;
+        margin: 10px 0;
+    }
 }
