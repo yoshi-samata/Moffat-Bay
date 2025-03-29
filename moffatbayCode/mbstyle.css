@@ -291,6 +291,9 @@ about us pagee
     font-size: 1.8em;
     margin-bottom: 10px;
 }
+/* ===============
+register pagee
+=============== */
 
 /* Hero Section for Register Page (Unique Class Name) */
 .register-hero {
@@ -397,3 +400,119 @@ about us pagee
         margin-left: 0; /* Remove margin on small screens */
     }
 }
+
+
+/* ===============
+login page
+=============== */
+/* Hero Section for Login Page (Unique Class Name) */
+.login-hero {
+    background: url('https://images.unsplash.com/photo-1519587334172-b4c56ceb7d67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.login-hero .hero-content {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+}
+
+.login-hero .hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.login-hero .hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.login-hero .login-form {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    flex: 1;
+    margin-left: 30px;
+}
+
+.login-hero .login-form form {
+    display: block;
+    width: 100%;
+}
+
+.login-hero .login-form form label {
+    font-size: 1.1em;
+    margin: 10px 0;
+    display: block;
+    color: #333;
+}
+
+.login-hero .login-form form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.login-hero .login-form form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button Styling */
+.login-hero .login-form form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-hero .login-form form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.login-hero .login-form form input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .login-hero {
+        flex-direction: column; /* Stack text and form vertically */
+        height: auto; /* Adjust height for small screens */
+    }
+
+    .login-hero .hero-content {
+        text-align: center;
+        max-width: 100%; /* Allow the text to occupy full width on small screens */
+        margin-bottom: 20px; /* Add space below the text */
+    }
+
+    .login-hero .login-form {
+        max-width: 100%; /* Allow form to take up full width */
+        margin-left: 0; /* Remove margin on small screens */
+    }
+}
+
+/* ===============
+contact us pagee
+================ */
