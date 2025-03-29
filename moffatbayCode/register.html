@@ -1,25 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Create Account</title>
-</head>
-<body>
-<h2>Customer Registration</h2>
-<form action="moffatbay.php" method="POST">
-    <label for ="email">Email</label>
-    <input type="email" id="email" name="email" required><br><br>
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="fname" required><br><br>
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lname" required><br><br>
-    <label for="boatname">Boat Name</label>
-    <input type="text" id="boatname" name="boatname" required><br><br>
-    <label for="boatlength">Boat Length</label>
-    <input type="text" id="boatlength" name="boatlength" required><br><br>
-    <label for="userpass">Password</label>
-    <input type="text" id="password" name="password" required><br><br>
+<html lang="en">
 
-    <input type="submit" value="Sign Up">
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="mbstyle.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="./images/Logo.png" class="logo" alt="Moffat Bay Logo">
+        <ul id="menu" class="hidden">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <!-- Hero Section with Registration Form -->
+    <div class="register-hero" style="background: url('https://images.unsplash.com/photo-1436162716854-dcb9157bfac1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;">
+        <div class="hero-content">
+            <h2>Register for Moffat Bay Marina</h2>
+            <p>Join us today and experience the best in luxury and adventure on the water!</p>
+        </div>
+
+        <!-- Registration Form inside Hero Section -->
+        <section class="registration-form">
+            <form action="moffatbay.php" method="POST">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required><br><br>
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" required><br><br>
+
+                <label for="boatname">Boat Name</label>
+                <input type="text" id="boatname" name="boatname" required><br><br>
+
+                <label for="boatlength">Boat Length</label>
+                <input type="text" id="boatlength" name="boatlength" required><br><br>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <input type="submit" value="Sign Up">
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Moffat Bay Marina. All rights reserved.</p>
+        <p>Follow us on: 
+            <a href="https://facebook.com/" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com/" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
+
 </html>
