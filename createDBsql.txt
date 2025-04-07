@@ -1,0 +1,58 @@
+-- Create the database
+CREATE DATABASE MoffatBay;
+USE MoffatBay;
+
+-- Create the user_account table
+CREATE TABLE user_account (
+    userid INT AUTO_INCREMENT PRIMARY KEY,
+    lname VARCHAR(255) NOT NULL,
+    fname VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    boatname VARCHAR(255),
+    boatlength FLOAT,
+    userpass VARCHAR(255) NOT NULL,
+    phone VARCHAR(20)
+);
+
+-- Create the slip table
+CREATE TABLE slip (
+    slipid INT AUTO_INCREMENT PRIMARY KEY,
+    size VARCHAR(50) NOT NULL,
+    availability INT NOT NULL
+);
+
+-- Create the reservation table
+CREATE TABLE reservation (
+    reservationid INT AUTO_INCREMENT PRIMARY KEY,
+    userid INT NOT NULL,
+    slipid INT NOT NULL,
+    startdate DATE NOT NULL,
+    enddate DATE NOT NULL,
+    totalcost DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (userid) REFERENCES user_account(userid),
+    FOREIGN KEY (slipid) REFERENCES slip(slipid)
+);
+
+-- Create the waitlist table
+CREATE TABLE waitlist (
+    waitlistid INT AUTO_INCREMENT PRIMARY KEY,
+    userid INT NOT NULL,
+    slipid INT NOT NULL,
+    requesteddate DATE NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    FOREIGN KEY (userid) REFERENCES user_account(userid),
+    FOREIGN KEY (slipid) REFERENCES slip(slipid)
+);
+
+-- Create the payment table
+CREATE TABLE payment (
+    paymentid INT AUTO_INCREMENT PRIMARY KEY,
+    reservationid INT NOT NULL,
+    userid INT NOT NULL,
+    paymentdate DATE NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    method VARCHAR(50) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    FOREIGN KEY (reservationid) REFERENCES reservation(reservationid),
+    FOREIGN KEY (userid) REFERENCES user_account(userid)
+);
