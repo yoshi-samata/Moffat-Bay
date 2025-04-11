@@ -1,0 +1,32 @@
+--Aaron Camp
+-- Moffat Bay DB
+
+-- Insert data into user_account table
+INSERT INTO user_account (lname, fname, email, boatname, boatlength, userpass, phone) VALUES
+('Smith', 'John', 'johnsmith@example.com', 'Sea Breeze', 25.5, 'hashedpassword1', '555-1234'),
+('Doe', 'Jane', 'janedoe@example.com', 'Ocean Dreamer', 30.0, 'hashedpassword2', '555-5678'),
+('Lee', 'Michael', 'mlee@example.com', 'Wave Runner', 15.0, 'hashedpassword3', '555-9101');
+
+-- Insert data into slip table
+INSERT INTO slip (size, availability) VALUES
+('Small', 10),
+('Medium', 8),
+('Large', 5);
+
+-- Insert data into reservation table
+INSERT INTO reservation (userid, slipid, startdate, enddate, totalcost) VALUES
+(1, 2, '2025-05-01', '2025-05-07', 500.00),
+(2, 3, '2025-05-15', '2025-05-20', 750.00),
+(3, 1, '2025-06-01', '2025-06-05', 300.00);
+
+-- Insert data into waitlist table
+INSERT INTO waitlist (userid, slipid, requesteddate, status) VALUES
+(1, 3, '2025-04-15', 'pending'),
+(2, 2, '2025-04-20', 'notified'),
+(3, 1, '2025-04-25', 'pending');
+
+-- Insert data into payment table
+INSERT INTO payment (reservationid, userid, paymentdate, amount, method, status) VALUES
+(1, 1, '2025-04-25', 500.00, 'credit card', 'completed'),
+(2, 2, '2025-05-10', 750.00, 'cash', 'completed'),
+(3, 3, '2025-05-20', 300.00, 'online transfer', 'pending');
