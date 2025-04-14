@@ -1,0 +1,26 @@
+
+
+1. user_account ↔ reservation:
+   -  One-to-Many
+   - Each user (`userid`) can have multiple reservations, but each reservation belongs to one user.
+
+2. reservation ↔ slip:
+   - Type: Many-to-One
+   - Multiple reservations (`slipid`) can be associated with the same slip size, but each reservation refers to one slip size.
+
+3. user_account ↔ waitlist:
+   - Type: One-to-Many
+   - Each user (`userid`) can be on the waitlist multiple times for different slip sizes, but each waitlist entry belongs to one user.
+
+4. waitlist ↔ slip:
+   - Type: Many-to-One
+   - Multiple users can be waiting for the same slip size (`slipid`), but each waitlist entry refers to one slip size.
+
+5. reservation ↔ payment:
+   - Type: One-to-One
+   - Each reservation (`reservationid`) has one corresponding payment, and each payment is tied to one reservation.
+
+6. **user_account ↔ payment**:
+   - Type: Many-to-One
+   - Each user (`userid`) can make multiple payments, but each payment is linked to one user.
+
