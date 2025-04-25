@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+#title h1 {
+font-family: 'Montserrat', sans-serif;
+font-size: 3.5em;
+text-align: center;
+margin-bottom: 0; /* Remove extra space after H1 */
+color: #f8f9fa;
+}
+
+#title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    text-align: center; /* Center-align the text */
+    margin-top: 0; /* Remove default top margin for H2 */
+    color: #f8f9fa;
+}
+main {
+    background-image: url(images/sunset.webp);
+}
+/* General Styles for the Images */
+img {
+    display: block; /* Centers images and prevents text wrapping */
+    margin: 0 auto; /* Center images */
+    max-width: 100%; /* Ensures images don't overflow their container */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Adds rounded corners for aesthetics */
+}
+
+/* Specific Styling for Proposal and Retired Images */
+#proposal {
+    max-width: 60%; /* Adjusts the size for better display */
+    max-height: 400px; /* Prevents images from being too tall */
+}
+
+img[src="images/finalyRetired.webp"] {
+    max-width: 60%; /* Adjusts the size for better display */
+    max-height: 400px; /* Prevents images from being too tall */
+}
+
+/* Optional for Other Images */
+img[src="images/partygirls.webp"] {
+    max-width: 80%; /* Adjusts size specifically for the celebrations image */
+    max-height: 500px; /* Sets height limit */
+}
+
+/* Content Container Styling */
+#content {
+    text-align: center; /* Centers all elements inside the content area */
+    margin: 20px auto;
+    padding: 10px;
+}
+h1, p {
+    color: #f8f9fa;
+}
+/* Grid Container */
+#grid-container {
+    display: grid; /* Enables grid layout */
+    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    justify-content: center; /* Centers grid items horizontally */
+    margin: 20px auto; /* Centers the grid container */
+    max-width: 1200px; /* Sets a maximum width for the grid container */
+}
+
+/* Grid Items */
+.grid-item {
+    text-align: center; /* Center-align text */
+    background-color: #ffffff; /* White background for each item */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    padding: 15px; /* Adds space inside each grid item */
+}
+
+/* Images */
+.grid-item img {
+    max-width: 100%; /* Ensures images scale with their container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Matches the rounded corners of the item */
+}
+
+/* Headings */
+.grid-item h3 {
+    color: #022c43; /* Dark blue for headings */
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Paragraphs */
+.grid-item p {
+    color: #333; /* Dark grey for text */
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts columns for smaller screens */
+    }
+
+    .grid-item h3 {
+        font-size: 1.2em; /* Slightly smaller font for smaller screens */
+    }
+
+    .grid-item p {
+        font-size: 0.9em; /* Slightly smaller font for smaller screens */
+    }
+}
+
+
+ 
+
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

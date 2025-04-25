@@ -1,0 +1,151 @@
+body {
+    background-image: url('../img/photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark overlay */
+    z-index: -1;
+    /* Behind all elements */
+}
+
+
+
+nav {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+
+main {
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.text {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+.proposal img {
+    align-self: center;
+    max-width: 60%;
+    /* Scale to fit the container */
+    min-width: 200px;
+    /* Prevent the image from shrinking too much */
+    max-height: 2500px;
+    /* Set a maximum height */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Ensure the full image is displayed */
+}
+
+.story img {
+    align-self: right;
+    max-width: 60%;
+    min-width: 200px;
+    max-height: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Center-align text block */
+    line-height: 1.6;
+    /* Increase line spacing for readability */
+    color: white;
+    /* Text color for contrast */
+}
+
+h1 {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Center-align text block */
+    line-height: 1.6;
+    /* Increase line spacing for readability */
+    color: white;
+}
+
+.pic {
+    text-align: left;
+}
+
+.container {
+    text-align: center;
+    /* Center text and inline elements */
+    margin: 30px auto;
+    /* Add spacing and center the container */
+    max-width: 800px;
+    /* Set a width limit for the content */
+}
+
+.container img {
+    max-width: 100%;
+    /* Ensure images scale with the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Optional: Rounded corners for images */
+    margin: 20px 0;
+    /* Add spacing around images */
+}
+
+.container p {
+    line-height: 1.6;
+    /* Improve readability */
+    color: white;
+    /* Ensure contrast */
+}
