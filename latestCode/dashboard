@@ -1,0 +1,66 @@
+/* Framework styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+main {
+  flex: 1;
+  background-image: url('images/sunset.webp'); 
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto; 
+}
+
+
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  header {
+    display: flex;
+    justify-content: space-between; /* Separates logo and nav links */
+    align-items: center; /* Vertically aligns content */
+    padding: 0.5rem 1rem; /* Reduces padding to make header smaller */
+    background-color: #333;
+    color: #fff;
+  }
+  
+  header .logo img {
+    height: 100px; /* Adjusts logo size to keep it compact */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem; /* Adds space between nav links */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  

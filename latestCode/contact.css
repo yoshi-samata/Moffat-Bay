@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/sunset.webp'); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid tiling the image */
+    color: #333; /* Dark text for readability */
+}
+/* Social Media Icons Styling */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center; /* Vertically centers if needed */
+    gap: 50px; /* Space between icons */
+    margin-top: 15px; /* Adds space above the icons */
+    margin-right: 20px;
+    text-align: center; /* Ensures consistent alignment */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #333; /* Default dark color */
+    font-size: 1.5em; /* Adjust icon size */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #022c43; /* Hover color */
+
+}
+
+
+
+
+main {
+    padding: 20px; /* Add space around content */
+    max-width: 800px; /* Limit content width */
+    margin: 0 auto; /* Center the content */
+}
+
+/* Section Styles */
+section {
+    background-color: #ffffff; /* White background for each section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px; /* Space inside each section */
+    margin: 20px 0; /* Space between sections */
+}
+
+/* Header Styles */
+h2 {
+    color: #022c43; /* Dark blue heading color */
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #555; /* Muted text for subheadings */
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Table and Layout (optional, for future use) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #022c43;
+    color: #fff; /* White text for header */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row colors */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    section {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+}

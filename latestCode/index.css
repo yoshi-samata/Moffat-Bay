@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* Typography for Title */
+#title h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 0; /* Remove extra space after H1 */
+    color: #f8f9fa;
+}
+
+#title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    text-align: center; /* Center-align the text */
+    margin-top: 0; /* Remove default top margin for H2 */
+    color: #f8f9fa;
+}
+
+/* Background Styling */
+body {
+    background-image: url(images/sunset.webp);
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid tiling the image */
+}
+
+/* General Styles for Images */
+img {
+    display: block; /* Centers images and prevents text wrapping */
+    margin: 0 auto; /* Center images */
+    max-width: 100%; /* Ensures images don't overflow their container */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Adds rounded corners for aesthetics */
+}
+
+/* Grid Layout */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between items */
+    align-items: center; /* Aligns images and text vertically */
+    margin: 40px auto; /* Space above and below sections */
+    max-width: 1200px; /* Center content on large screens */
+    padding: 20px;
+}
+
+/* Grid Items */
+.grid-item img {
+    max-width: 100%; /* Responsive image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+#darktext {
+    color: black;
+}
+
+.grid-item h1 {
+    color: white; /* white heading color */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 1em;
+    color: white; /* Dark grey for text readability */
+    line-height: 1.6; /* Improve text readability */
+}
+
+/* Alternating Section Backgrounds */
+.grid-layout:nth-child(odd) {
+    background-color: #f4f4f4; /* Light gray for odd sections */
+    border-radius: 10px; /* Match the rounded corners */
+    padding: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts columns for smaller screens */
+    }
+
+    .grid-item h1 {
+        font-size: 1.2em; /* Slightly smaller font for smaller screens */
+    }
+
+    .grid-item p {
+        font-size: 0.9em; /* Slightly smaller font for smaller screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
